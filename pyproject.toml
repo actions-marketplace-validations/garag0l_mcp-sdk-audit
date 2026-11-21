@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-sdk-audit"
+version = "0.1.0"
+description = "Find MCP SDK versions with known advisories, and the code that stays exposed after you upgrade."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+authors = [{ name = "Murat Bekgi" }]
+keywords = ["mcp", "model-context-protocol", "security", "sast", "sca", "ai-security", "oauth"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/garag0l/mcp-sdk-audit"
+Issues = "https://github.com/garag0l/mcp-sdk-audit/issues"
+Changelog = "https://github.com/garag0l/mcp-sdk-audit/blob/main/CHANGELOG.md"
+
+[project.scripts]
+mcp-sdk-audit = "mcp_sdk_audit.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_sdk_audit"]
+
+[tool.ruff]
+line-length = 130
+extend-exclude = ["tests/fixtures"]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

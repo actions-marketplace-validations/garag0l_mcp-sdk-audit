@@ -1,0 +1,83 @@
+name: mcp-sdk-audit
+description: Find MCP SDK versions with known advisories, and the code that stays exposed after you upgrade.
+author: garag0l
+branding:
+  icon: shield
+  color: red
+
+inputs:
+  path:
+    description: Directory to scan.
+    default: "."
+  fail-on:
+    description: Fail the step at or above this severity (critical, high, medium, low, none).
+    default: medium
+  upload-sarif:
+    description: Upload results to GitHub code scanning (needs `security-events: write`).
+    default: "true"
+  online:
+    description: Fetch the latest advisories from the GitHub Advisory Database instead of the bundled snapshot.
+    default: "true"
+  include-tests:
+    description: Also apply source rules to test files.
+    default: "false"
+
+outputs:
+  sarif:
+    description: Path to the SARIF report.
+    value: ${{ steps.scan.outputs.sarif }}
+
+runs:
+  using: composite
+  steps:
+    - name: Install mcp-sdk-audit
+      shell: bash
+      run: python3 -m pip install --quiet --disable-pip-version-check "$GITHUB_ACTION_PATH"
+
+    - name: Scan
+      id: scan
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+        INPUT_PATH: ${{ inputs.path }}
+        INPUT_FAIL_ON: ${{ inputs.fail-on }}
+        INPUT_ONLINE: ${{ inputs.online }}
+        INPUT_INCLUDE_TESTS: ${{ inputs.include-tests }}
+      run: |
+        args=("$INPUT_PATH")
+        [ "$INPUT_INCLUDE_TESTS" = "true" ] && args+=(--include-tests)
+        if [ "$INPUT_ONLINE" = "true" ]; then
+          db="$RUNNER_TEMP/mcp-advisories.json"
+          if python3 -m mcp_sdk_audit --update-snapshot "$db"; then
+            args+=(--advisories "$db")
+          else
+            echo "::warning::Could not fetch advisories; using the bundled snapshot."
+          fi
+        fi
+        sarif="$RUNNER_TEMP/mcp-sdk-audit.sarif"
+        python3 -m mcp_sdk_audit "${args[@]}" --fail-on none -f sarif -o "$sarif"
+        echo "sarif=$sarif" >> "$GITHUB_OUTPUT"
+        set +e
+        python3 -m mcp_sdk_audit "${args[@]}" --fail-on "$INPUT_FAIL_ON" --no-color > "$RUNNER_TEMP/mcp-sdk-audit.txt"
+        echo "code=$?" >> "$GITHUB_OUTPUT"
+        set -e
+        cat "$RUNNER_TEMP/mcp-sdk-audit.txt"
+        { echo '```'; cat "$RUNNER_TEMP/mcp-sdk-audit.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+    - name: Upload SARIF
+      if: ${{ inputs.upload-sarif == 'true' }}
+      uses: github/codeql-action/upload-sarif@1bd86f2fdb4b86187fa4059f16f31a3202acc9ea # v4.39.4
+      with:
+        sarif_file: ${{ steps.scan.outputs.sarif }}
+        category: mcp-sdk-audit
+
+    - name: Enforce threshold
+      shell: bash
+      env:
+        CODE: ${{ steps.scan.outputs.code }}
+        INPUT_FAIL_ON: ${{ inputs.fail-on }}
+      run: |
+        if [ "$CODE" != "0" ]; then
+          echo "::error::mcp-sdk-audit found issues at or above '$INPUT_FAIL_ON' (exit $CODE)."
+          exit 1
+        fi

@@ -1,0 +1,489 @@
+{
+  "source": "https://api.github.com/advisories",
+  "advisories": [
+    {
+      "ghsa": "GHSA-qx49-fqc8-xw99",
+      "cve": "CVE-2026-115563",
+      "severity": "high",
+      "summary": "Model Context Protocol Python SDK: OAuth client could send credentials to an authorization server chosen by the MCP server",
+      "url": "https://github.com/advisories/GHSA-qx49-fqc8-xw99",
+      "published": "2026-11-19",
+      "affected": [
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": ">= 2.0.0a1, < 2.2.0",
+          "patched": "2.2.0"
+        },
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": ">= 1.9.1, < 1.30.0",
+          "patched": "1.30.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-w4fh-qvv9-3v23",
+      "cve": "CVE-2026-116684",
+      "severity": "medium",
+      "summary": "Model Context Protocol Python SDK: Server bearer-token authentication accepts tokens issued for a different resource server",
+      "url": "https://github.com/advisories/GHSA-w4fh-qvv9-3v23",
+      "published": "2026-10-27",
+      "affected": [
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": ">= 2.0.0, < 2.2.0",
+          "patched": "2.2.0"
+        },
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": ">= 1.10.0, < 1.30.0",
+          "patched": "1.30.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-rwrf-2pqf-9j8j",
+      "cve": "CVE-2026-116686",
+      "severity": "medium",
+      "summary": "Model Context Protocol Python SDK: Client fetched server-chosen $ref URLs while validating tool results against output schemas",
+      "url": "https://github.com/advisories/GHSA-rwrf-2pqf-9j8j",
+      "published": "2026-10-27",
+      "affected": [
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": ">= 2.0.0, < 2.2.0",
+          "patched": "2.2.0"
+        },
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": ">= 1.10.0, < 1.30.0",
+          "patched": "1.30.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-f897-62hf-6gxq",
+      "cve": null,
+      "severity": "high",
+      "summary": "MCP TypeScript SDK: HTTP server transports and handlers did not limit request body size or JSON-RPC batch length",
+      "url": "https://github.com/advisories/GHSA-f897-62hf-6gxq",
+      "published": "2026-10-27",
+      "affected": [
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/sdk",
+          "vulnerable_range": ">= 1.10.0, < 1.30.1",
+          "patched": "1.30.1"
+        },
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/server",
+          "vulnerable_range": ">= 2.0.0, < 2.1.0",
+          "patched": "2.1.0"
+        },
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/node",
+          "vulnerable_range": ">= 2.0.0, < 2.1.0",
+          "patched": "2.1.0"
+        },
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/hono",
+          "vulnerable_range": ">= 2.0.0, < 2.0.1",
+          "patched": "2.0.1"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-5h93-6whr-6q8j",
+      "cve": "CVE-2026-116685",
+      "severity": "medium",
+      "summary": "Model Context Protocol Python SDK: HTTP client transports followed cross-origin redirects carrying custom headers and bodies",
+      "url": "https://github.com/advisories/GHSA-5h93-6whr-6q8j",
+      "published": "2026-10-27",
+      "affected": [
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": ">= 2.0.0, < 2.2.0",
+          "patched": "2.2.0"
+        },
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": ">= 1.8.0, < 1.30.0",
+          "patched": "1.30.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-rvq5-wwqv-78pq",
+      "cve": "CVE-2026-111771",
+      "severity": "medium",
+      "summary": "MCP TypeScript SDK: Server bearer authentication accepted tokens issued for another service",
+      "url": "https://github.com/advisories/GHSA-rvq5-wwqv-78pq",
+      "published": "2026-10-20",
+      "affected": [
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/sdk",
+          "vulnerable_range": ">= 1.6.0, < 1.32.0",
+          "patched": "1.32.0"
+        },
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/server",
+          "vulnerable_range": ">= 2.0.0, < 2.3.0",
+          "patched": "2.3.0"
+        },
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/express",
+          "vulnerable_range": ">= 2.0.0, < 2.0.2",
+          "patched": "2.0.2"
+        },
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/server-legacy",
+          "vulnerable_range": ">= 2.0.0, < 2.3.1",
+          "patched": "2.3.1"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-jm63-cq47-j5jp",
+      "cve": "CVE-2026-111770",
+      "severity": "high",
+      "summary": "MCP  TypeScript server SDK: Shared transport or server instances delivered one HTTP client's messages to another",
+      "url": "https://github.com/advisories/GHSA-jm63-cq47-j5jp",
+      "published": "2026-10-20",
+      "affected": [
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/server",
+          "vulnerable_range": ">= 2.0.0, < 2.3.0",
+          "patched": "2.3.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-6prh-2h8m-c8cw",
+      "cve": "CVE-2026-111769",
+      "severity": "medium",
+      "summary": "MCP TypeScript client SDK: HTTP client transports and OAuth requests followed cross-origin redirects and re-sent custom headers and request bodies",
+      "url": "https://github.com/advisories/GHSA-6prh-2h8m-c8cw",
+      "published": "2026-10-20",
+      "affected": [
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/sdk",
+          "vulnerable_range": "< 1.32.0",
+          "patched": "1.32.0"
+        },
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/client",
+          "vulnerable_range": ">= 2.0.0, < 2.3.0",
+          "patched": "2.3.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-46jr-4wx8-v453",
+      "cve": "CVE-2026-111768",
+      "severity": "high",
+      "summary": "MCP TypeScript SDK: One HTTP request within the default size limit could exhaust server memory during validation",
+      "url": "https://github.com/advisories/GHSA-46jr-4wx8-v453",
+      "published": "2026-10-20",
+      "affected": [
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/sdk",
+          "vulnerable_range": ">= 1.3.0, < 1.32.0",
+          "patched": "1.32.0"
+        },
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/server",
+          "vulnerable_range": ">= 2.0.0, < 2.3.0",
+          "patched": "2.3.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-22jm-h49p-29qw",
+      "cve": "CVE-2026-111767",
+      "severity": "high",
+      "summary": "MCP TypeScript SDK: Experimental tasks were not tied to the session that created them",
+      "url": "https://github.com/advisories/GHSA-22jm-h49p-29qw",
+      "published": "2026-10-20",
+      "affected": [
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/sdk",
+          "vulnerable_range": ">= 1.24.0, < 1.32.0",
+          "patched": "1.32.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-84m7-p3x7-pcfv",
+      "cve": "CVE-2026-59951",
+      "severity": "medium",
+      "summary": "MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enables Resource Exhaustion",
+      "url": "https://github.com/advisories/GHSA-84m7-p3x7-pcfv",
+      "published": "2026-10-15",
+      "affected": [
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": ">= 1.8.0, < 1.30.0",
+          "patched": "1.30.0"
+        },
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": ">= 2.0.0, < 2.2.0",
+          "patched": "2.2.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-6qxp-vccf-f47h",
+      "cve": "CVE-2026-104850",
+      "severity": "high",
+      "summary": "MCP TypeScript SDK: OAuth client could send credentials to an authorization server chosen by the MCP server",
+      "url": "https://github.com/advisories/GHSA-6qxp-vccf-f47h",
+      "published": "2026-10-06",
+      "affected": [
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/sdk",
+          "vulnerable_range": ">= 1.12.0, < 1.31.0",
+          "patched": "1.31.0"
+        },
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/client",
+          "vulnerable_range": ">= 2.0.0, < 2.2.0",
+          "patched": "2.2.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-vj7q-gjh5-988w",
+      "cve": "CVE-2026-59950",
+      "severity": "high",
+      "summary": "MCP Python SDK: WebSocket server transport does not support Host/Origin validation",
+      "url": "https://github.com/advisories/GHSA-vj7q-gjh5-988w",
+      "published": "2026-07-16",
+      "affected": [
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": "< 1.28.1",
+          "patched": "1.28.1"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-jpw9-pfvf-9f58",
+      "cve": "CVE-2026-52869",
+      "severity": "high",
+      "summary": "MCP Python SDK: HTTP transports serve session requests without verifying the authenticated principal",
+      "url": "https://github.com/advisories/GHSA-jpw9-pfvf-9f58",
+      "published": "2026-07-16",
+      "affected": [
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": "<= 1.27.1",
+          "patched": "1.27.2"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-hvrp-rf83-w775",
+      "cve": "CVE-2026-52870",
+      "severity": "high",
+      "summary": "MCP Python SDK: Experimental task handlers allow any client to access and cancel other clients' tasks",
+      "url": "https://github.com/advisories/GHSA-hvrp-rf83-w775",
+      "published": "2026-07-16",
+      "affected": [
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": ">= 1.23.0, <= 1.27.1",
+          "patched": "1.27.2"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-xw59-hvm2-8pj6",
+      "cve": "CVE-2026-34742",
+      "severity": "high",
+      "summary": "DNS Rebinding Protection Disabled by Default in Model Context Protocol Go SDK for Servers Running on Localhost",
+      "url": "https://github.com/advisories/GHSA-xw59-hvm2-8pj6",
+      "published": "2026-04-01",
+      "affected": [
+        {
+          "ecosystem": "go",
+          "package": "github.com/modelcontextprotocol/go-sdk",
+          "vulnerable_range": "< 1.4.0",
+          "patched": "1.4.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-q382-vc8q-7jhj",
+      "cve": null,
+      "severity": "high",
+      "summary": "Improper handling of null Unicode character when parsing JSON in github.com/modelcontextprotocol/go-sdk",
+      "url": "https://github.com/advisories/GHSA-q382-vc8q-7jhj",
+      "published": "2026-03-19",
+      "affected": [
+        {
+          "ecosystem": "go",
+          "package": "github.com/modelcontextprotocol/go-sdk",
+          "vulnerable_range": "<= 1.4.0",
+          "patched": "1.4.1"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-89xv-2j6f-qhc8",
+      "cve": "CVE-2026-33252",
+      "severity": "high",
+      "summary": "Cross-Site Tool Execution for HTTP Servers without Authorizatrion in github.com/modelcontextprotocol/go-sdk",
+      "url": "https://github.com/advisories/GHSA-89xv-2j6f-qhc8",
+      "published": "2026-03-19",
+      "affected": [
+        {
+          "ecosystem": "go",
+          "package": "github.com/modelcontextprotocol/go-sdk",
+          "vulnerable_range": "<= 1.4.0",
+          "patched": "1.4.1"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-wvj2-96wp-fq3f",
+      "cve": "CVE-2026-27896",
+      "severity": "high",
+      "summary": "MCP Go SDK Vulnerable to Improper Handling of Case Sensitivity",
+      "url": "https://github.com/advisories/GHSA-wvj2-96wp-fq3f",
+      "published": "2026-02-26",
+      "affected": [
+        {
+          "ecosystem": "go",
+          "package": "github.com/modelcontextprotocol/go-sdk",
+          "vulnerable_range": "< 1.3.1",
+          "patched": "1.3.1"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-345p-7cg4-v4c7",
+      "cve": "CVE-2026-25536",
+      "severity": "high",
+      "summary": "@modelcontextprotocol/sdk has cross-client data leak via shared server/transport instance reuse",
+      "url": "https://github.com/advisories/GHSA-345p-7cg4-v4c7",
+      "published": "2026-02-04",
+      "affected": [
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/sdk",
+          "vulnerable_range": ">= 1.10.0, <= 1.25.3",
+          "patched": "1.26.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-8r9q-7v3j-jr4g",
+      "cve": "CVE-2026-0621",
+      "severity": "high",
+      "summary": "Anthropic's MCP TypeScript SDK has a ReDoS vulnerability",
+      "url": "https://github.com/advisories/GHSA-8r9q-7v3j-jr4g",
+      "published": "2026-01-05",
+      "affected": [
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/sdk",
+          "vulnerable_range": ">= 1.3.0, < 1.25.2",
+          "patched": "1.25.2"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-w48q-cv73-mx4w",
+      "cve": "CVE-2025-66414",
+      "severity": "high",
+      "summary": "Model Context Protocol (MCP) TypeScript SDK does not enable DNS rebinding protection by default",
+      "url": "https://github.com/advisories/GHSA-w48q-cv73-mx4w",
+      "published": "2025-12-02",
+      "affected": [
+        {
+          "ecosystem": "npm",
+          "package": "@modelcontextprotocol/sdk",
+          "vulnerable_range": "< 1.24.0",
+          "patched": "1.24.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-9h52-p55h-vw2f",
+      "cve": "CVE-2025-66416",
+      "severity": "high",
+      "summary": "Model Context Protocol (MCP) Python SDK does not enable DNS rebinding protection by default",
+      "url": "https://github.com/advisories/GHSA-9h52-p55h-vw2f",
+      "published": "2025-12-02",
+      "affected": [
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": "< 1.23.0",
+          "patched": "1.23.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-j975-95f5-7wqh",
+      "cve": "CVE-2025-53365",
+      "severity": "high",
+      "summary": "MCP Python SDK has Unhandled Exception in Streamable HTTP Transport, Leading to Denial of Service",
+      "url": "https://github.com/advisories/GHSA-j975-95f5-7wqh",
+      "published": "2025-07-04",
+      "affected": [
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": "< 1.10.0",
+          "patched": "1.10.0"
+        }
+      ]
+    },
+    {
+      "ghsa": "GHSA-3qhf-m339-9g5v",
+      "cve": "CVE-2025-53366",
+      "severity": "high",
+      "summary": "MCP Python SDK vulnerability in the FastMCP Server causes validation error, leading to DoS",
+      "url": "https://github.com/advisories/GHSA-3qhf-m339-9g5v",
+      "published": "2025-07-04",
+      "affected": [
+        {
+          "ecosystem": "pip",
+          "package": "mcp",
+          "vulnerable_range": "< 1.9.4",
+          "patched": "1.9.4"
+        }
+      ]
+    }
+  ]
+}
